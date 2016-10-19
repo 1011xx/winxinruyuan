@@ -1,0 +1,20 @@
+<view class="main-container">
+   <view class="body"> 
+   	<ul>
+   		<li class="li1" wx:for="{{list}}" wx:for-item="item">
+   			<p class="xxleft">
+			  <image class="userinfo-avatar" src="/images/3.jpg" background-size="cover"></image>
+		    </p>
+		    <p class="xxcenter">
+		    	<span class="sp1">{{item.style}}</span>
+		    	<span class="sp2">{{item.xx}}</span>
+		    </p>
+		    <p class="xxright">
+		    	{{item.timer}}
+		    	
+		    </p>
+   		</li>
+   		
+   	</ul>
+   </view>
+</view>

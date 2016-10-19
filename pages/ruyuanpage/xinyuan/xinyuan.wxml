@@ -1,0 +1,122 @@
+<view class="main-container">
+	<view class="banner">
+		<p class="bannerleft">
+			<image class="userinfo-avatar" src="{{list.userInfo.avatar}}" background-size="cover"></image>
+		</p>
+		<p class="banneright">
+			<span class="sp1">
+			<b class="name">{{list.userInfo.nickName}}</b>
+			<image src=""></image>
+			</span>
+
+			<span class="sp2">
+			<b class="qm">{{list.userInfo.autograph}}</b>
+			</span>
+			<span class="sp3">
+				<b class="zwdz">{{list.userInfo.district}}</b>
+				<b class="zwsr">{{list.userInfo.birthday}}</b>
+			</span>
+			<span class="sp4">
+				<b class="gz">关注:<i>{{list.userInfo.beiGuanZhu}}</i></b>
+				<b class="fs">粉丝:<i>{{list.userInfo.blackUser}}</i></b>
+			</span>
+		</p>
+
+	</view>
+
+	<view class="body">
+		<view class="nav">
+			<ul class="left">
+				<li class="active">
+					全部愿望<i>{{list.wishList.length}}</i>
+				</li>
+				<li>
+					按发布时间排
+				</li>
+			</ul>
+			<p class="right">
+				愿望标签
+			</p>
+		</view>
+        <scroll-view scroll-y="true" class="scrolly">
+		
+		<view class="xq">
+			<navigator   wx:for="{{list.wishList}}" wx:for-item="item">
+			<view class="xq1 xqz">
+				<p class="top">
+					<b class="bt1">#{{item.labelText}}#</b>
+					<b class="yw">{{item.textContent}}</b>
+				</p>
+				<ul  class="{{item.enclosure==1 ? 'hide imgs u1':'show imgs u1'}}">
+					
+					<li class="listli1">
+						<image src="{{item.enclosure}}"></image>
+						<!--<image src="" class="img2"></image>
+						<image src="" ></image>-->
+					</li>
+					<li class="listli2">
+						<image src=""></image>
+						<image src="" class="img2"></image>
+						<image src="" ></image>
+					</li>
+					<li class="listli3">
+						<image src=""></image>
+					</li>
+					
+				</ul>
+				<p class="bottom">
+					<span class="bleft">
+					<icon type="waiting" size="20" color="{{'#92d7c8'}}"/>
+					<b class="timer">{{item.createDate}}</b>
+				</span>
+					<span class="bright">
+					<image class="dz" src="/images/appreciate_light.png"></image>
+					<b class="dz">{{item.praiseCount}}</b>
+					<image class="xx" src="/images/post.png"></image>
+					<b class="xx">{{item.commentCount}}</b>				
+				</span>
+				</p>
+			</view>
+			</navigator>
+			
+			
+			
+			<!--<view class="xq2 xqz">
+				<p class="top">
+					<b class="bt1">#要陪父母做的事#</b>
+					<b class="yw">开心每一天</b>
+				</p>
+				<ul class="imgs u6">
+					
+					<li class="listli1">
+						<image src=""></image>
+						<image src="" class="img2"></image>
+						<image src="" ></image>
+					</li>
+					<li class="listli2">
+						<image src=""></image>
+						<image src="" class="img2"></image>
+						<image src="" ></image>
+					</li>
+					<li class="listli3">
+						<image src=""></image>
+					</li>
+					
+				</ul>
+				<p class="bottom">
+					<span class="bleft">
+					<icon type="waiting" size="20" color="{{item}}" />
+					<b class="timer">2016.10.13</b>
+				</span>
+					<span class="bright">
+					<image class="dz" src="/images/img2.png"></image>
+					<b class="dz">1</b>
+					<image class="xx" src="/images/img2.png"></image>
+					<b class="xx">0</b>				
+				</span>
+				</p>
+			</view>-->
+		</view>
+		</scroll-view>
+	</view>
+</view>

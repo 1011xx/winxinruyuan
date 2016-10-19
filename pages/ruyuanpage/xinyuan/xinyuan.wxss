@@ -1,0 +1,231 @@
+.main-container {
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	background-color: #ccc;
+}
+.banner{
+	width: 100%;
+	height: 150px;
+	background: url(../../../images/292466.jpg);
+	background-size: 100%;
+	box-sizing: border-box;
+	padding-top: 35px;
+}
+.bannerleft{
+	float:left;
+	width:30%;
+	height:100%;
+	text-align: center;	
+}
+.bannerleft .userinfo-avatar{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+.banneright{
+	float:left;
+	width:70%;
+	height:100%;
+}
+.banneright span{
+	display: block;
+	color: #fff;
+	font-size: 12px;
+	height: 22px;
+	width: 100%;
+	line-height: 22px;
+}
+.banneright span b{
+	margin-right: 20px;
+}
+.banneright .sp1{
+	font-size: 18px;
+}
+.banneright .sp4{
+	font-size: 14px;
+}
+
+.body{
+	height: 100%;
+	padding: 10px;
+}
+.nav{
+	width: 100%;
+	height: 40px;
+}
+.nav .left,.nav .right{
+	display: block;
+	height: 30px;
+	border-left: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ccc;
+}
+.nav .left{
+	width: 200px;
+	float: left;
+}
+.nav .right{
+	width: 100px;
+	float: right;
+	text-align: center;
+	line-height: 30px;
+}
+.nav .left li{
+	float: left;
+	line-height: 20px;
+	height: 100%;
+	padding: 3px 8px;
+}
+
+.body .scrolly{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+.body .xqz{
+	width: 100%;
+/*	height:300px;*/
+	box-sizing: border-box;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+/*	display: flex;
+	flex-direction: column;*/
+}
+.body .xqz icon{
+	color:purple;
+}
+.xqz .top{
+	height: 30px;
+	width: 100%;
+	/*background-color: red;*/
+}
+.xqz .top .bt1{
+	color: #92d7c8;
+}
+.xqz .top .yw{
+	font-size: 14px;
+}
+.xqz .imgs{
+	margin-top: 10px;
+	display: block;
+	width: 100%;
+	height: 230px;
+	background-color: blue;
+	overflow: hidden;
+	
+}
+.xqz .imgs li{
+	display: block;
+	width:100%;
+	background-color: yellow;
+}
+.xqz .imgs li .img2{
+	margin: 0 2%;
+}
+.xqz .imgs li .ml{
+	margin: 0 0 0 2%;
+}
+.xqz .u1 .listli2,.xqz .u1 .listli3,.xqz .u2 .listli2,.xqz .u2 .listli3,.xqz .u3 .listli2,.xqz .u3 .listli3
+{
+	display: none;
+}
+.xqz .u1 .listli1,.xqz .u2 .listli1,.xqz .u3 .listli1
+{
+	height: 100%;
+}
+.xqz .u1 .listli1 image,.xqz .u4 .listli2 image,.xqz .u7 .listli3 image{
+	width: 100%;
+	height: 100%;
+	background-color: aqua;
+}
+
+.xqz .u2 .listli1 image,.xqz .u5 .listli2 image,.xqz .u8 .listli3 image{
+	width: 49%;
+	height: 100%;
+	background-color: aqua;
+}
+
+.xqz .u4 .listli1,.xqz .u5 .listli1,.xqz .u6 .listli1,.xqz .u4 .listli2,.xqz .u5 .listli2,.xqz .u6 .listli2
+{
+	height: 49%;
+	margin-bottom: 2%;
+}
+.xqz .u4 .listli3,.xqz .u5 .listli3,.xqz .u6 .listli3
+{
+	display: none;
+}
+.xqz .u3 .listli1 image,.xqz .u9 .listli3 image,.xqz .u4 .listli1 image,.xqz .u5 .listli1 image,.xqz .u6 .listli1 image,.xqz .u6 .listli2 image,.xqz .u7 .listli2 image,.xqz .u8 .listli3 image,.xqz .u9 .listli4 image,.xqz .u7 .listli1 image,.xqz .u8 .listli1 image,.xqz .u9 .listli1 image
+{
+	width: 32%;
+	height: 100%;
+	background-color: aqua;
+}
+
+.xqz .u7 li,.xqz .u8 li,.xqz .u9 li{
+	height: 32%;
+	background-color: red;
+}
+
+.xqz .u7 .listli2,.xqz .u8 .listli2,.xqz .u9 .listli2
+{
+	margin: 2% 0;
+}
+
+.xqz .hide{
+	display: none;
+}
+
+.xqz .bottom{
+	display: block;
+	width: 100%;
+	height: 30px;
+}
+.xqz .bottom span{
+	width: 28%;
+	height: 100%;
+}
+.xqz .bottom .bleft{
+	width: 71%;
+}
+.xqz .bottom  b{
+	margin: 3px;
+	line-height: 30px;
+}
+.xqz .bottom .bleft{
+	float: left;
+	font-size: 14px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.xqz .bottom .bleft icon{
+	width: 20px;
+	margin-top: 7px;
+	margin-left: 2px;
+	height: 100%;
+	float: left;
+}
+.xqz .bottom .bleft .timer{
+	width: 150px;
+	height: 20px;
+	line-height: 30px;
+	overflow: hidden;
+	float: left;
+}
+.xqz .bottom .bright{
+	float: right;
+	padding: 10px 0 0 0;
+}
+.xqz .bottom .bright image{
+	width: 20px;
+	height: 20px;
+	overflow: hidden;
+}

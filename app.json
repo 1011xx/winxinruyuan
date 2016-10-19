@@ -1,0 +1,49 @@
+{
+  "pages":[
+  
+  "pages/ruyuanpage/main/main",
+  "pages/ruyuanpage/xinyuan/xinyuan",
+  "pages/ruyuanpage/detail/detail",
+  "pages/ruyuanpage/sz/sz",
+  "pages/ruyuanpage/xx/xx",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+   "color": "#a9b7b7",
+    "selectedColor": "#0dc441",
+    "borderStyle": "white",
+    "list":[
+    {
+    "pagePath": "pages/ruyuanpage/main/main",
+        "text": "发现",
+        "iconPath": "images/ss1.png",
+        "selectedIconPath": "images/ss.png"
+    },
+    {
+    "pagePath": "pages/ruyuanpage/xinyuan/xinyuan",
+        "text": "心愿",
+        "iconPath": "images/ax.png",
+        "selectedIconPath": "images/ax1.png"
+    },
+    {
+    "pagePath": "pages/ruyuanpage/xx/xx",
+        "text": "消息",
+        "iconPath": "images/xx1.png",
+        "selectedIconPath": "images/xx.png"
+    },
+    {
+    "pagePath": "pages/ruyuanpage/detail/detail",
+        "text": "设置",
+        "iconPath": "images/sz.png",
+        "selectedIconPath": "images/sz1.png"
+    }
+    ]
+  }
+}

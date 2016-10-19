@@ -1,0 +1,117 @@
+<view class="main-container">
+	<div class="head">
+		<view class="headbox">
+			<icon type="search" size="20" color="{{item}}" />
+			<input type="text" placeholder="请输入要搜索的内容" value="" />
+		</view>
+	</div>
+	<view class="list-loading">
+		<loading hidden="{{loadingHidden}}">努力加载中...</loading>
+	</view>
+	<view hidden="{{refreshHidden}}">
+		<button plain="true" loading="true">努力刷新中...</button>
+	</view>
+	<scroll-view scroll-y="true" class="scrolly" bindscrolltoupper="actionToupper"  upper-threshold="0"  scroll-top="{{refreshHidden ? 1 : 0}}">
+		<view class="body">
+			<view class="headnav">
+				<b class="b1 active">热门标签</b><b class="b2">查看全部</b>
+			</view>
+
+			<scroll-view class="bannernav" scroll-x="true">
+				<ul class="hxnav">
+					<li>
+						<image src="/images/1.jpg" mode="scaleToFill"></image>
+						<b>#必须掌握的技术#</b>
+					</li>
+					<li>
+						<image src="/images/2.jpg" mode="scaleToFill"></image>
+						<b>#一生所愿#</b>
+					</li>
+					<li>
+						<image src="/images/3.jpg" mode="scaleToFill"></image>
+						<b>#陪父母做的事#</b>
+					</li>
+
+					<li>
+						<image src="/images/4.jpg" mode="scaleToFill"></image>
+						<b>#最想去的地方#</b>
+					</li>
+					<li>
+						<image src="/images/5.jpg" mode="scaleToFill"></image>
+						<b>#想和TA一起做的事#</b>
+					</li>
+				</ul>
+			</scroll-view>
+
+			<view class="bodynav">
+				<ul>
+					<li class="{{current == 0 ? 'active' : ''}}" catchtap="switchSlider" data-index="0">最新</li>
+					<li class="{{current == 1 ? 'active' : ''}}" catchtap="switchSlider" data-index="1">关注</li>
+					<li class="{{current == 2 ? 'active' : ''}}" catchtap="switchSlider" data-index="2">推荐</li>
+				</ul>
+			</view>
+			<view class="bodysw">
+				<swiper class="swh" indicator-dots="{{swiper.indicatorDots}}" autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}" current="{{current}}" bindchange="changeSlider">
+					<block>
+
+						<swiper-item>
+							<scroll-view class="scrolly2" wx:if="{{loadingHidden}}" scroll-y="true"  bindscrolltolower="actionTolower"  lower-threshold="0">
+
+								<view class="d1">
+									<navigator wx:for="{{list}}" wx:for-item="item">
+										<view class="d2">
+											<view class="p1">
+												<navigator url="../xinyuan/xinyuan?id={{item.wishCreaterId}}">
+													<image class="userinfo-avatar" src="{{item.wishCreaterAvatar}}" background-size="cover"></image>
+												</navigator>
+												<b class="name">{{item.wishCreaterName}}</b>
+											</view>
+											<navigator url="../detail/detail?id={{item.wishId}}">
+											<view class="p">
+												<span class="bl"><b class="bl1">#{{item.labelText}}#</b><b class="bl2">{{item.textContent}}</b></span>
+
+											</view>
+
+											<image src="{{item.enclosure}}" class="{{item.enclosure==1 ? 'hide':'show'}}" id="d2img"></image>
+											<view class="tb">
+												<b class="xx">{{item.praiseCount}}</b>
+												<image class="xx" src="/images/appreciate_light.png"></image>
+												<b class="dz">{{item.commentCount}}</b>
+												<image class="dz" src="/images/post.png"></image>
+
+											</view>
+										    </navigator>
+										</view>
+									</navigator>
+
+								</view>
+								<view hidden="{{loadmoreHidden}}">
+									<button plain="true" loading="true">努力加载中...</button>
+								</view>
+							</scroll-view>
+						</swiper-item>
+
+						<swiper-item>
+							<ul>
+
+								<li>
+									<div class="libody">
+
+										<image src="{{item.wishCreaterAvatar}}"></image>
+										<text>名字</text>
+										<p></p>
+									</div>
+
+								</li>
+
+							</ul>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+
+			
+
+		</view>
+	</scroll-view>
+</view>

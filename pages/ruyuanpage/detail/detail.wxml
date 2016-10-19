@@ -1,0 +1,27 @@
+<view class="containerb">
+
+	<view class="d1">
+		<view class="d2">
+			<view class="p1">
+				<navigator url="../xinyuan/xinyuan">
+					<image class="userinfo-avatar" src="{{list.wishCreaterAvatar}}" background-size="cover"></image>
+				</navigator>
+				<b class="name">{{list.wishCreaterName}}</b>
+				<b class="timer">{{list.createDate}}</b>
+			</view>
+			<view class="p">
+				<span class="bl"><b class="bl1">#{{list.labelText}}#</b><b class="bl2">{{list.textContent}}</b></span>
+
+			</view>
+
+			<image src="{{list.enclosure}}" class="{{list.enclosure==1 ? 'hide':'show'}}" id="d2img"></image>
+			<view class="tb">
+
+				<b class="dz">赞4</b>
+
+				<b class="xx">评论 0</b>
+
+			</view>
+		</view>
+	</view>
+</view>
